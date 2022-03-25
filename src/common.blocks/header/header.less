@@ -5,27 +5,43 @@
 @dark-200: #858585;
 @dark-300: #3A3A47;
 @dark-400: #2B2831;
+@mobile: 576px;
+@tablet: 768px;
+@tablet-2: 992px;
+@desktop: 1200px;
 
 .header {
-  min-height: 72px;
+  display: flex;
+  align-items: center;
   background-color: @dark-400;
 
   &__inner {
-    min-height: 72px;
+    padding: 12px 0;
+    min-height: 42px;
     display: flex;
     align-items: center;
+
+    @media (max-width:@tablet-2) {
+      padding: 19px 0;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
     margin-right: 32px;
-    max-width: 309px;
-    width: 100%;
+    z-index: 11;
   }
 
   &__logo-img {
     width: 32px;
     height: 32px;
     margin-right: 8px;
+
+    @media (max-width:@mobile) {
+      margin-right: 6px;
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &__logo-title {
@@ -35,6 +51,78 @@
     line-height: 1.3;
     text-transform: uppercase;
     color: @white;
+
+    @media (max-width: 1350px) {
+      display: none;
+    }
+
+    @media (max-width:@tablet-2) {
+      display: block;
+    }
+
+    @media (max-width:@mobile) {
+      text-transform: capitalize;
+      font-size: 12px;
+    }
+  }
+
+  &__link-box {
+    display: flex;
+    align-items: center;
+
+    @media (max-width:@tablet-2) {
+      flex-direction: column;
+      float: left;
+    }
+  }
+
+  &__price-link {
+    margin-right: 36px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration-line: underline;
+    color: @white;
+    padding-left: 32px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../../assets/icon-download.svg);
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width:@tablet-2) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__link-tel {
+    padding-left: 28px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    color: @white;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../../assets/icon-tel.svg);
+      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+    }
   }
 
 }
