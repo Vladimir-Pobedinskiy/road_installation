@@ -1,0 +1,147 @@
+@white: #FFFFFF;
+@orange-100: #FFDC5E;
+@orange-200: #FFB71B;
+@dark-100: #B5AFAF;
+@dark-200: #858585;
+@dark-300: #3A3A47;
+@dark-400: #2B2831;
+@mobile: 576px;
+@tablet: 768px;
+@tablet-2: 992px;
+@desktop: 1200px;
+
+.footer {
+  padding-top: 32px;
+  min-height: 320px;
+  background-image: url(../../assets/bg-footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @media (max-width:@mobile){
+     min-height: 644px; 
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width:@desktop){
+      grid-template-columns: repeat(2, 1fr); 
+      row-gap: 40px;
+    }
+
+    @media (max-width:@tablet){
+      grid-template-columns: 100%; 
+      row-gap: 29px;
+    }
+
+  }
+
+  &__assortment-list {
+    margin-right: 78px;
+
+    @media (max-width:@tablet){
+      margin-right: 0;
+    }
+  }
+
+  &__assortment-item {
+    margin-bottom: 9px;
+  }
+
+  &__assortment-link {
+    text-decoration: underline;
+  }
+
+  &__assortment-link,
+  &__menu-link,
+  &__contacts-title,
+  &__contacts-link {
+    font-size: 14px;
+    line-height: 1.4;
+    color: @white;
+  }
+
+  &__menu-list {
+    margin-right: 121px;
+
+    @media (max-width:@tablet){
+      margin-right: 0;
+    }
+  }
+
+  &__menu-item {
+    margin-bottom: 9px;
+  }
+
+  &__menu-link {
+    text-decoration: underline;
+  }
+
+  &__contacts-list {
+    margin-right: 85px;
+
+    @media (max-width:@tablet){
+      margin-right: 0;
+    }
+  }
+
+  &__contacts-item {
+    margin-bottom: 16px;
+  }
+
+  &__logo-box {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (max-width:@desktop){
+       align-items: flex-start; 
+    }
+
+    @media (max-width:@mobile){
+       margin-bottom: 5px; 
+    }
+  }
+
+  &__logo-img {
+    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+
+    @media (max-width:@mobile){
+       width: 16px;
+       height: 16px; 
+    }
+  }
+
+  &__logo-title {
+    font-size: 25px;
+    line-height: 1.4;
+    color: @white;
+
+    @media (max-width:@mobile){
+       font-size: 12px; 
+    }
+  }
+
+  &__copy,
+  &__author,
+  &__author-link {
+    margin-bottom: 82px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: right;
+    color: @white;
+
+    @media (max-width:@desktop){
+        text-align: left;
+    }
+  }
+
+  &__author-link {
+    text-decoration: underline;
+  }
+}

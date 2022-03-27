@@ -1,3 +1,15 @@
+@white: #FFFFFF;
+@orange-100: #FFDC5E;
+@orange-200: #FFB71B;
+@dark-100: #B5AFAF;
+@dark-200: #858585;
+@dark-300: #3A3A47;
+@dark-400: #2B2831;
+@mobile: 576px;
+@tablet: 768px;
+@tablet-2: 992px;
+@desktop: 1200px;
+
 @import (reference) './variables.less';
 
 html {
@@ -72,7 +84,8 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: @dark-400;
-  background-color: @white;
+  background-color: #E5E5E5;
+  ;
 }
 
 @font-face {
@@ -107,6 +120,45 @@ body {
   max-width: 1448px;
   width: 100%;
   margin: 0 auto;
+}
+
+.section {
+  padding: 88px 0;
+
+  @media (max-width:@mobile) {
+    padding: 56px 0;
+  }
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #2B2831;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 9px;
+    width: 56px;
+    height: 16px;
+    background-color: #FFB71B;
+    z-index: -1;
+    @media (max-width:@mobile){
+       bottom: 6px; 
+    }
+  }
+
+  @media (max-width:@mobile) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .sr-only {
