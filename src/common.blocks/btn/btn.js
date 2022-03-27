@@ -187,3 +187,8 @@ class GraphModal {
 }
 
 const modal = new GraphModal();
+
+
+// валидация формы
+
+
