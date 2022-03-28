@@ -64,3 +64,4 @@
 
 // normalize.css
 require('normalize.css/normalize.css');
+import Inputmask from "inputmask";
