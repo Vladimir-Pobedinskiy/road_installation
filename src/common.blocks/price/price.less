@@ -12,8 +12,12 @@
 
 
 .price {
-  overflow-x: hidden;
-  overflow-x: scroll;
+
+  @media (max-width: 1500px){
+    overflow-x: hidden;
+    overflow-x: scroll;
+  } 
+
 
   &__section {
     padding: 88px 0 145px;
